@@ -1,11 +1,17 @@
 /* Coaches Page Styles */
 :root {
-    --primary-color: #FF8A00;
-    --secondary-color: #FF5E14;
+    --primary-color: #4CAF50;
+    --secondary-color: #388E3C;
+    --text-color: #212121;
+    --text-light: #ffffff;
+    --background-dark: #212121;
+    --background-light: #f9f9f9;
+    --font-family: "Roboto", Sans-serif;
+    --heading-font: "Oswald", Sans-serif;
+    --bg-dark: #0D0D0D;
+    --bg-darker: #080808;
     --dark-bg: #1A1A1A;
     --light-bg: #f9f9f9;
-    --text-color: #333;
-    --light-text: #fff;
     --border-radius: 8px;
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -14,12 +20,12 @@
 /* Coaches Hero Section */
 .coaches-hero {
     padding: 120px 0 80px;
-    background-color: #212121;
-    background-image: url('../images/backgrounds/hero-bg-desktop.png');
+    background-color: var(--background-dark);
+    background-image: url('../images/tarzaned-bg.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: var(--light-text);
+    color: var(--text-light);
     text-align: center;
     position: relative;
 }
@@ -44,6 +50,8 @@
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
+    font-family: var(--heading-font);
+    line-height: 1.3;
 }
 
 /* Coaches hero section paragraph styling */
@@ -57,6 +65,7 @@
     margin-right: auto;
     color: var(--text-light);
     opacity: 0.9; /* Restored original opacity */
+    font-family: var(--font-family);
 }
 
 /* Coaches Grid Section */
@@ -82,11 +91,12 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: var(--font-family);
 }
 
 .filter-btn:hover, .filter-btn.active {
     background: var(--gradient);
-    color: var(--light-text);
+    color: var(--text-light);
     border-color: transparent;
 }
 
@@ -138,11 +148,12 @@
     top: 15px;
     right: 15px;
     background: var(--gradient);
-    color: var(--light-text);
+    color: var(--text-light);
     padding: 5px 15px;
     border-radius: var(--border-radius);
     font-weight: 600;
     font-size: 0.9rem;
+    font-family: var(--font-family);
 }
 
 .coach-info {
@@ -154,6 +165,8 @@
     margin-bottom: 10px;
     color: var(--dark-bg);
     font-weight: 700;
+    font-family: var(--heading-font);
+    line-height: 1.3;
 }
 
 .coach-roles {
@@ -164,18 +177,20 @@
 }
 
 .role {
-    background-color: rgba(255, 138, 0, 0.1);
+    background-color: rgba(76, 175, 80, 0.1);
     color: var(--primary-color);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    font-family: var(--font-family);
 }
 
 .coach-bio {
     color: #666;
     margin-bottom: 20px;
     line-height: 1.6;
+    font-family: var(--font-family);
 }
 
 .coach-services {
@@ -200,6 +215,8 @@
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: var(--dark-bg);
+    font-family: var(--heading-font);
+    line-height: 1.3;
 }
 
 .service-details {
@@ -208,11 +225,13 @@
     margin-bottom: 15px;
     color: #666;
     font-size: 0.95rem;
+    font-family: var(--font-family);
 }
 
 .price {
     font-weight: 700;
     color: var(--primary-color);
+    font-family: var(--font-family);
 }
 
 .book-btn {
@@ -221,6 +240,7 @@
     font-weight: 600;
     padding: 10px;
     font-size: 0.9rem;
+    font-family: var(--font-family);
 }
 
 /* Coaches page intro paragraph styling */
@@ -231,6 +251,7 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-family: var(--font-family);
 }
 
 /* Booking Section */
@@ -244,6 +265,8 @@
     font-size: 2.5rem;
     margin-bottom: 15px;
     color: var(--dark-bg);
+    font-family: var(--heading-font);
+    line-height: 1.3;
 }
 
 .booking-section > .container > p {
@@ -251,6 +274,7 @@
     max-width: 700px;
     margin: 0 auto 40px;
     color: #666;
+    font-family: var(--font-family);
 }
 
 .booking-form {
@@ -271,6 +295,7 @@
     margin-bottom: 8px;
     font-weight: 600;
     color: var(--dark-bg);
+    font-family: var(--font-family);
 }
 
 .form-group input,
@@ -282,6 +307,7 @@
     border-radius: var(--border-radius);
     font-size: 1rem;
     transition: border-color 0.3s ease;
+    font-family: var(--font-family);
 }
 
 .form-group input:focus,
@@ -299,6 +325,7 @@
     font-weight: 600;
     margin-top: 20px;
     cursor: pointer;
+    font-family: var(--font-family);
 }
 
 /* Responsive Styles */
@@ -315,7 +342,7 @@
 @media (max-width: 768px) {
     .coaches-hero {
         padding: 60px 0;
-        background-image: url('../images/backgrounds/hero-bg-mobile.jpg');
+        background-image: url('../images/tarzaned-bg.png');
         background-position: center right;
     }
     
@@ -350,4 +377,18 @@
     .booking-form {
         padding: 20px;
     }
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    line-height: 1.3;
+    margin-bottom: 20px;
 }
