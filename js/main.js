@@ -23,10 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainMenu = document.querySelector('.main-menu');
+    const body = document.body;
     
     mobileMenuToggle.addEventListener('click', function() {
         mainMenu.classList.toggle('active');
         mobileMenuToggle.classList.toggle('active');
+        body.classList.toggle('menu-open'); // Add a class to prevent scrolling when menu is open
+    });
+    
+    // Close mobile menu when clicking on a menu item
+    document.querySelectorAll('.main-menu a').forEach(item => {
+        item.addEventListener('click', function() {
+            mainMenu.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            body.classList.remove('menu-open');
+        });
     });
     
     // Smooth scrolling for anchor links
@@ -48,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (mainMenu.classList.contains('active')) {
                     mainMenu.classList.remove('active');
                     mobileMenuToggle.classList.remove('active');
+                    body.classList.remove('menu-open');
                 }
             }
         });
